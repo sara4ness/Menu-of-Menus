@@ -1,0 +1,218 @@
+@import url("https://use.typekit.net/daf5api.css");
+
+body {
+  font-family: "futura-100", sans-serif;
+  background-color: #0d0c0c;
+  color: #a1a0a0;
+  margin: 0;
+  padding: 4rem;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 0 2rem;             
+  background-color: #0d0c0c;       /* optional */
+  border-bottom: 1px solid #ddd;  /* optional */
+}
+
+header h1 {
+  color: #00ff1e;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: #a1a0a0;
+  /* color: #00ff1e; */
+  font-size: 1rem;
+}
+
+/* === NAVIGATION BAR === */
+nav {
+  background: #0d0c0c;
+  /* border-top: 1px solid #a1a0a0;
+  border-bottom: 1px solid #a1a0a0; */
+  position: top;
+  top: 0;
+  z-index: 100;
+}
+
+header nav ul {
+  display: flex;
+  gap: 1.5rem; /* space between links */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #a1a0a0;
+  /* color: #00ff1e; */
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #00ff1e;
+}
+
+@media (max-width: 600px) {
+header {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  }
+}
+
+/* === Horizontal Menu Layout === */
+.menu-collection {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 100%;
+  margin: 2rem 0 auto;
+}
+
+.menu-item {
+  background: #0d0c0c;;
+  /* border: 1px solid #fff; */
+  /* border-radius: 12px; */
+  /* box-shadow: 0 2px 6px rgba(228, 220, 220, 0.4); */
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;   
+  margin-top: 4rem;
+}
+
+.menu-item:hover {
+  transform: translateY(-4px);
+  /* box-shadow: 0 6px 10px rgba(228, 220, 220, 0.45);  */
+  }
+
+.menu-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #505050;
+  border-top: 1px solid #505050;
+}
+
+.menu-content {
+  padding: 1.5rem;
+}
+
+.menu-content h2 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+  color: #a1a0a0;
+  font-weight: 500;
+
+}
+
+.menu-content p {
+  color: #a1a0a0;
+  font-size: 0.80rem;
+  margin-bottom: 1rem;
+}
+
+.menu-content a {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  /* border-radius: 6px; */
+  background: #0d0c0c;
+  color: #a1a0a0;
+  border: 1px solid #a1a0a0;
+  text-decoration: none;
+  font-size: 0.80rem;
+  transition: background 0.2s ease;
+  width: auto;
+  max-width: fit-content;
+}
+
+.menu-content a:hover {
+  background: #00ff1e;
+  border: 1px solid #00ff1e;
+  color: #000;
+}
+
+.a {
+  display: none;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between; /* heading on left, button on right */
+  align-items: center;
+}
+
+.menu-header h2 {
+  margin: 0;
+}
+
+.menu-header a {
+  margin: 0;
+}
+
+/* === Vertical / Sidebar Menu Layout === */
+  .menu-collection-vertical {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  overflow-x: auto;         /* enables horizontal scrolling */
+  overflow-y: hidden;
+  white-space: nowrap;      /* keeps items on one line */
+  scroll-behavior: smooth;  /* smooth scroll effect */
+  padding-bottom: 4rem; 
+  padding-top: 2rem; 
+  margin: 2rem 0 0 0;
+}
+
+.vertical-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: auto;
+  height: 560px;
+  flex: 0 0 auto;
+}
+
+.menu-item-vertical {
+  flex: 0 0 auto;           /* prevents shrinking/wrapping */
+  width: auto;
+  margin-right: 4rem;
+}
+
+.vertical-menu .menu-preview {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #505050;
+  border-left: 1px solid #505050;
+}
+
+.vertical-menu .menu-preview img {
+  height: 100%;               /* fill the height of the card */
+  width: auto;                /* maintain aspect ratio */
+  display: block;
+  object-fit: contain;        /* ensures no cropping */
+}
+
+.vertical-menu .menu-content {
+  width: 220px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  white-space: normal; 
+}
+
+
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  color: #777;
+  font-size: 0.9rem;
+}
